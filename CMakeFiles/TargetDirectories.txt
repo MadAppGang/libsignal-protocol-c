@@ -1,0 +1,9 @@
+/Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/CMakeFiles/install.dir
+/Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/CMakeFiles/ALL_BUILD.dir
+/Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/CMakeFiles/ZERO_CHECK.dir
+/Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/CMakeFiles/install.dir
+/Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/CMakeFiles/signal-protocol-c.dir
+/Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/CMakeFiles/install.dir
+/Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/CMakeFiles/curve25519.dir
+/Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/protobuf-c/CMakeFiles/install.dir
+/Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/protobuf-c/CMakeFiles/protobuf-c.dir

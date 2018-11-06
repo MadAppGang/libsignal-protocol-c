@@ -1,0 +1,1778 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		4AA728E19BFB4E369FBBAD3D /* ZERO_CHECK */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 97889CD6F6044CFCA6921E83 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */;
+			buildPhases = (
+				43B6D94992C441CB803FB045 /* CMake Rules */,
+			);
+			dependencies = (
+			);
+			name = ZERO_CHECK;
+			productName = ZERO_CHECK;
+		};
+		4BACC4AFB2594B97BAFEDF31 /* ALL_BUILD */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = E132F608273E4110A5A0463A /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */;
+			buildPhases = (
+				B5EB22D63D1A4DA39878A953 /* CMake Rules */,
+			);
+			dependencies = (
+				FCDD4F68C3EF41428DE7E6C2 /* PBXTargetDependency */,
+				760E373F3AFE4C908C63DB50 /* PBXTargetDependency */,
+				86C250484B6146BABB5982A8 /* PBXTargetDependency */,
+				6D622D363CD54715B559D09A /* PBXTargetDependency */,
+			);
+			name = ALL_BUILD;
+			productName = ALL_BUILD;
+		};
+		95ABFDCE12C24E3A9A39031E /* install */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 991F3672C2C24F89AA85DE8B /* Build configuration list for PBXAggregateTarget "install" */;
+			buildPhases = (
+				AB260733A9794EB084E9A697 /* CMake PostBuild Rules */,
+			);
+			dependencies = (
+				0CB0027008AF4217896EE645 /* PBXTargetDependency */,
+			);
+			name = install;
+			productName = install;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		0102E25D89914340B8CD294F /* gen_x.c in Sources */ = {isa = PBXBuildFile; fileRef = D58823EFE78F41B6B3C94A32 /* gen_x.c */; };
+		04654CFADDD049F59E22515E /* group_session_builder.c in Sources */ = {isa = PBXBuildFile; fileRef = 2FEEBCCBD4C44118944D6FE4 /* group_session_builder.c */; };
+		05029ACFA444404392591C53 /* session_builder.c in Sources */ = {isa = PBXBuildFile; fileRef = 4248502321024247AC4385C3 /* session_builder.c */; };
+		084BD1A22A224C9BA427D2B3 /* ge_p3_tobytes.c in Sources */ = {isa = PBXBuildFile; fileRef = 16FB3EBC331C4BADB09FE898 /* ge_p3_tobytes.c */; };
+		0949EA29398F4D1499385CB0 /* ge_scalarmult.c in Sources */ = {isa = PBXBuildFile; fileRef = A5B3F9D6FD7742BF8C6D7D90 /* ge_scalarmult.c */; };
+		09F2B3CF5AA04616B087CAF5 /* sender_key_record.c in Sources */ = {isa = PBXBuildFile; fileRef = 14DAB8B0822B4F7FBE39652D /* sender_key_record.c */; };
+		0A8FA3988FFF4F489D8658BA /* ge_p2_dbl.c in Sources */ = {isa = PBXBuildFile; fileRef = FEFCD0E175E34AB3A8D9ACE0 /* ge_p2_dbl.c */; };
+		11EA54F0063B415981DC67C8 /* FingerprintProtocol.pb-c.c in Sources */ = {isa = PBXBuildFile; fileRef = 2506B0A4091440F7BA53E30F /* FingerprintProtocol.pb-c.c */; };
+		161E8CB511C547DF93E7E5EF /* sender_key.c in Sources */ = {isa = PBXBuildFile; fileRef = 086C231760B840149B01D620 /* sender_key.c */; };
+		17C8A0578B064D24A4523110 /* ge_p1p1_to_p3.c in Sources */ = {isa = PBXBuildFile; fileRef = 4513D218E6CE4A4DBED39BD9 /* ge_p1p1_to_p3.c */; };
+		1EB33293C92A40C995B0EF1E /* sc_clamp.c in Sources */ = {isa = PBXBuildFile; fileRef = 09A60FA6DCFE4157B4C6DF5E /* sc_clamp.c */; };
+		23726D6D67EF44F2989FDA3D /* key_helper.c in Sources */ = {isa = PBXBuildFile; fileRef = 8CBD61E820CD4317BA412546 /* key_helper.c */; };
+		23A21BABBA0343538891A7CC /* gen_labelset.c in Sources */ = {isa = PBXBuildFile; fileRef = 33CA9C5422FB450BA6780D5C /* gen_labelset.c */; };
+		24F93C8912104CC1A3EF9CA6 /* fe_isnonzero.c in Sources */ = {isa = PBXBuildFile; fileRef = 9D5896282DA740D9B0DDFA19 /* fe_isnonzero.c */; };
+		251C99524EBE40E7A1EBFF5E /* session_state.c in Sources */ = {isa = PBXBuildFile; fileRef = 21BB61257C03430792D6E677 /* session_state.c */; };
+		2FAED208F85E4FE08A9195BF /* fe_montx_to_edy.c in Sources */ = {isa = PBXBuildFile; fileRef = ED7ECA610C2E42D8B27D4ADF /* fe_montx_to_edy.c */; };
+		3111ED750C854AAABECECBB1 /* ge_msub.c in Sources */ = {isa = PBXBuildFile; fileRef = 25DCE22F7E65492885807634 /* ge_msub.c */; };
+		35863EC194734D71904D8087 /* ge_montx_to_p3.c in Sources */ = {isa = PBXBuildFile; fileRef = E3CB802602CA4D3ABD2EF48E /* ge_montx_to_p3.c */; };
+		36D4B143ADC846AD920FC6A6 /* open_modified.c in Sources */ = {isa = PBXBuildFile; fileRef = EC83475BBDBC4C4D85A6E1B6 /* open_modified.c */; };
+		393C4DADB8944DFB957B8995 /* internal_fast_tests.c in Sources */ = {isa = PBXBuildFile; fileRef = EA19FC3726BC4299919B3B70 /* internal_fast_tests.c */; };
+		3A6EBF479726412B9AA9B87F /* vpool.c in Sources */ = {isa = PBXBuildFile; fileRef = 34E708D2F37A4F09862ECCE2 /* vpool.c */; };
+		3A8F5F653C8F454F845A20B7 /* fe_0.c in Sources */ = {isa = PBXBuildFile; fileRef = CD444BE3E9414AF0B4F87679 /* fe_0.c */; };
+		3D7AABD60E734B19BF4148A9 /* curve.c in Sources */ = {isa = PBXBuildFile; fileRef = FF03915EAD7841ECBBE091FE /* curve.c */; };
+		3E6AE045D29C4C2A8C205347 /* ge_isneutral.c in Sources */ = {isa = PBXBuildFile; fileRef = 69966F60DB274033A7FEC416 /* ge_isneutral.c */; };
+		41048DA2F8554E80BAC97E88 /* session_record.c in Sources */ = {isa = PBXBuildFile; fileRef = 01D73C1657C7437EB6FC6AEF /* session_record.c */; };
+		4237A413759C494188DE6C43 /* fe_sq2.c in Sources */ = {isa = PBXBuildFile; fileRef = 1E6BB923C99245DD90694644 /* fe_sq2.c */; };
+		45C0139967304D59AF8015C3 /* protobuf-c.c in Sources */ = {isa = PBXBuildFile; fileRef = F5796CC684014E5C852F2CEE /* protobuf-c.c */; };
+		48DBC640227A4F6CAD8D98DF /* ge_p3_to_p2.c in Sources */ = {isa = PBXBuildFile; fileRef = 42E4B9BB50004520909B6A99 /* ge_p3_to_p2.c */; };
+		4954BEA5BB004C69BD6A9813 /* ge_p1p1_to_p2.c in Sources */ = {isa = PBXBuildFile; fileRef = BB61C72D29154B35BB7067F0 /* ge_p1p1_to_p2.c */; };
+		4D794D208691441BA44F298E /* session_cipher.c in Sources */ = {isa = PBXBuildFile; fileRef = 6806B906F311433AA7D3F3AE /* session_cipher.c */; };
+		4E34F782461D4DAA93C20294 /* sc_reduce.c in Sources */ = {isa = PBXBuildFile; fileRef = AD777D4DE3A441748BFBEE3D /* sc_reduce.c */; };
+		5179560025134F268750743D /* LocalStorageProtocol.pb-c.c in Sources */ = {isa = PBXBuildFile; fileRef = 27985F6E89364B55A12394A2 /* LocalStorageProtocol.pb-c.c */; };
+		5268AE40813D4062B06FEE49 /* zeroize.c in Sources */ = {isa = PBXBuildFile; fileRef = F982625D74924CB68BCB3C80 /* zeroize.c */; };
+		56A57489D20443EAB63694A0 /* fe_sq.c in Sources */ = {isa = PBXBuildFile; fileRef = 409BB24F971F4538A2946968 /* fe_sq.c */; };
+		5A96BF1E0DAB4902BC8C5CF6 /* gen_veddsa.c in Sources */ = {isa = PBXBuildFile; fileRef = E95F927563CB4BF58AA28973 /* gen_veddsa.c */; };
+		5D53DB75C82F4F3DA484F50B /* point_isreduced.c in Sources */ = {isa = PBXBuildFile; fileRef = E40F5A7E4B6142DEB0A205B3 /* point_isreduced.c */; };
+		64F2BA61853246489D81974C /* blocks.c in Sources */ = {isa = PBXBuildFile; fileRef = 00AB81583DCA4775ADB367F6 /* blocks.c */; };
+		658A8A530A3045C19F162ACB /* fe_sub.c in Sources */ = {isa = PBXBuildFile; fileRef = DE191B9C030F4A9F8AF8DA6E /* fe_sub.c */; };
+		6786D703920943A580971C54 /* fe_tobytes.c in Sources */ = {isa = PBXBuildFile; fileRef = A33193A0403E4394A270E105 /* fe_tobytes.c */; };
+		68618F307B4F4AE388FE6BB9 /* elligator.c in Sources */ = {isa = PBXBuildFile; fileRef = FBD10651ACC64E71B2BDAF60 /* elligator.c */; };
+		6AAB628BDFFE4653946348BF /* session_pre_key.c in Sources */ = {isa = PBXBuildFile; fileRef = C54572C2F3C5442EB54C5660 /* session_pre_key.c */; };
+		6D9D612A7BD944A584E1D48E /* ge_p3_to_montx.c in Sources */ = {isa = PBXBuildFile; fileRef = 5031D93233CD48CDB352FF48 /* ge_p3_to_montx.c */; };
+		6EBD4FDF539A4CFE9D96672E /* fe_sqrt.c in Sources */ = {isa = PBXBuildFile; fileRef = D7DB554E87174379A94F87AD /* fe_sqrt.c */; };
+		7170236EEABE490383315375 /* open.c in Sources */ = {isa = PBXBuildFile; fileRef = 4E7DF42CD600415393B3F039 /* open.c */; };
+		74E44D7AC6644986AC3665FC /* ge_p3_add.c in Sources */ = {isa = PBXBuildFile; fileRef = C482204586E64DB2B573109A /* ge_p3_add.c */; };
+		75DFA3BCD9C848D0986764DA /* ge_scalarmult_base.c in Sources */ = {isa = PBXBuildFile; fileRef = 7607E8CE8194472A81E24615 /* ge_scalarmult_base.c */; };
+		75F241C0AEDB40858BFABAAB /* compare.c in Sources */ = {isa = PBXBuildFile; fileRef = 62E763A28022480E8415A15F /* compare.c */; };
+		7606737095D94AE990250B08 /* keygen.c in Sources */ = {isa = PBXBuildFile; fileRef = 4677C344C2D74C10B613BEC2 /* keygen.c */; };
+		791D775D997D4AF8AC2B5D12 /* gen_eddsa.c in Sources */ = {isa = PBXBuildFile; fileRef = A6A5A808E4874C22811EAF21 /* gen_eddsa.c */; };
+		7BDCA21DAAE240848B6D138B /* ge_tobytes.c in Sources */ = {isa = PBXBuildFile; fileRef = 388E5B9AEB9545DB904BF177 /* ge_tobytes.c */; };
+		7C3C53CAD51742F3BA6086AC /* fe_isreduced.c in Sources */ = {isa = PBXBuildFile; fileRef = 2AE1BC9B859B4C24AAB0EBED /* fe_isreduced.c */; };
+		7DE4219CA40A45408473C49B /* fe_isequal.c in Sources */ = {isa = PBXBuildFile; fileRef = 5336003AC5314ED2BF77C219 /* fe_isequal.c */; };
+		80C036FB155A4747BF4AB4E0 /* sc_cmov.c in Sources */ = {isa = PBXBuildFile; fileRef = 306B93652EBA48FBADAD3984 /* sc_cmov.c */; };
+		834225A77E1E4F50ACFA8EEF /* fe_cmov.c in Sources */ = {isa = PBXBuildFile; fileRef = 2E47BA86F217466F8FF813C7 /* fe_cmov.c */; };
+		86FEE46BBFF140BA85CE3A97 /* fingerprint.c in Sources */ = {isa = PBXBuildFile; fileRef = 359A6D8F2A8F4AC69D5087BF /* fingerprint.c */; };
+		8A3E7F8B70CE43AF955419F3 /* fe_pow22523.c in Sources */ = {isa = PBXBuildFile; fileRef = EFAA4F6E22A6444692F8BC75 /* fe_pow22523.c */; };
+		8D124656E7A64F1DB3502672 /* sc_muladd.c in Sources */ = {isa = PBXBuildFile; fileRef = 801E9B44EA5C41499667E8D6 /* sc_muladd.c */; };
+		915E58EF196A4FB9A4F7F519 /* ratchet.c in Sources */ = {isa = PBXBuildFile; fileRef = 88C6441AD0EE4602AA03501C /* ratchet.c */; };
+		9601B231123147C5AFABC05C /* sc_neg.c in Sources */ = {isa = PBXBuildFile; fileRef = 9EEAFB8BA2934C4EAADE34A2 /* sc_neg.c */; };
+		989244CCA503410DA453593B /* fe_add.c in Sources */ = {isa = PBXBuildFile; fileRef = 38F2D11CC3224F37A0CB4417 /* fe_add.c */; };
+		9951FA45B31C4E06AB6894D7 /* hash.c in Sources */ = {isa = PBXBuildFile; fileRef = F7C036AD68424CC1B346AD73 /* hash.c */; };
+		9E327CF8E90F42F5A2144EDD /* ge_madd.c in Sources */ = {isa = PBXBuildFile; fileRef = 78240158203E470AA52E11D2 /* ge_madd.c */; };
+		A0B9F583890740E8920733E1 /* fe_frombytes.c in Sources */ = {isa = PBXBuildFile; fileRef = FF560E123C3847AE8F2EDC49 /* fe_frombytes.c */; };
+		A14132F2E667494A9666D0B9 /* curve_sigs.c in Sources */ = {isa = PBXBuildFile; fileRef = 51087C30D5594D6CA2E70918 /* curve_sigs.c */; };
+		AA5ACAFBB2C74FA0BCF12D67 /* ge_add.c in Sources */ = {isa = PBXBuildFile; fileRef = 0CE2146C7F5140CDA8FE144E /* ge_add.c */; };
+		AB8816963068499FAD6C1C14 /* sc_isreduced.c in Sources */ = {isa = PBXBuildFile; fileRef = 15A0012F1FD340418FAD60F0 /* sc_isreduced.c */; };
+		B19E94FD10E24BE291830C51 /* ge_p3_to_cached.c in Sources */ = {isa = PBXBuildFile; fileRef = 72C145DD05594F6098C425A6 /* ge_p3_to_cached.c */; };
+		B2F7CD134C714FFEA330AA71 /* ge_neg.c in Sources */ = {isa = PBXBuildFile; fileRef = 4A5C204C8A9C44BD9971AA92 /* ge_neg.c */; };
+		BA7FE8C57B8C4B67BA4BE642 /* fe_1.c in Sources */ = {isa = PBXBuildFile; fileRef = 06AA581948E047C5B5FE8085 /* fe_1.c */; };
+		BDAC95E4E8B94C60B0F38FAF /* ge_p2_0.c in Sources */ = {isa = PBXBuildFile; fileRef = FCAAC5964DE74CA2AC4951D4 /* ge_p2_0.c */; };
+		C4159AFF95B34E53B09D8249 /* ge_double_scalarmult.c in Sources */ = {isa = PBXBuildFile; fileRef = 2529E45FED7444CFB3CBFBE0 /* ge_double_scalarmult.c */; };
+		C46A70B002D042D0930F1EA9 /* fe_mul.c in Sources */ = {isa = PBXBuildFile; fileRef = 55A8D7E8D194460286E89290 /* fe_mul.c */; };
+		C4E1FFD3A3DD45F3B3E3D755 /* sign.c in Sources */ = {isa = PBXBuildFile; fileRef = 0A4B79116E354351A434E0B0 /* sign.c */; };
+		C6F4701D34AC48D5A542305E /* xeddsa.c in Sources */ = {isa = PBXBuildFile; fileRef = 2CB19A3381034904A0BF45F9 /* xeddsa.c */; };
+		C814F377005F41ADBFB14D6D /* fe_copy.c in Sources */ = {isa = PBXBuildFile; fileRef = 0162B8CF26D94A66AF84EC5D /* fe_copy.c */; };
+		C8389741887A4490813108F0 /* curve25519-donna.c in Sources */ = {isa = PBXBuildFile; fileRef = F4B47E6E59C94AB0BE962445 /* curve25519-donna.c */; };
+		CA616D8D6ED141A09F020A6C /* fe_invert.c in Sources */ = {isa = PBXBuildFile; fileRef = 9C4C538378164BACBE9A57DE /* fe_invert.c */; };
+		CA86567365784D0CBE56E6F6 /* ge_p3_dbl.c in Sources */ = {isa = PBXBuildFile; fileRef = ADE93B4876FE4EBEB9590191 /* ge_p3_dbl.c */; };
+		CE4009FC76F54D9DAA713790 /* hkdf.c in Sources */ = {isa = PBXBuildFile; fileRef = C5226EA0238A4AD5874BEAD8 /* hkdf.c */; };
+		D13B1944475A42409DE25A38 /* ge_p3_0.c in Sources */ = {isa = PBXBuildFile; fileRef = 58845E668D68491E81C98BA9 /* ge_p3_0.c */; };
+		D4B1941D77084FABB925E36D /* utility.c in Sources */ = {isa = PBXBuildFile; fileRef = 474F5CE67CDB4F28AFAAB8FF /* utility.c */; };
+		D9251C07C4FB4CC38F5AF74E /* ge_sub.c in Sources */ = {isa = PBXBuildFile; fileRef = 3C41FA3AC42F4ECBA6109909 /* ge_sub.c */; };
+		DD651CA91B7F4E7A9350D7D6 /* fe_neg.c in Sources */ = {isa = PBXBuildFile; fileRef = 6CFDAB51719E4AC5B412102A /* fe_neg.c */; };
+		E22934A1DD5D4486883D0706 /* sender_key_state.c in Sources */ = {isa = PBXBuildFile; fileRef = 0DC6B074875A42728DDA50AB /* sender_key_state.c */; };
+		E3E2E8DDBBEC46C0B6CFB4AB /* fe_mont_rhs.c in Sources */ = {isa = PBXBuildFile; fileRef = 4028279F436A4214A580A943 /* fe_mont_rhs.c */; };
+		E452FD47CCC0495D8B1CA1DD /* group_cipher.c in Sources */ = {isa = PBXBuildFile; fileRef = 81F482C5C6FC4D358B6F22B9 /* group_cipher.c */; };
+		E9DCFFE588604CFF8DFA77D7 /* fe_isnegative.c in Sources */ = {isa = PBXBuildFile; fileRef = 6A6D6DC04F164615BBE6EB63 /* fe_isnegative.c */; };
+		EA47643A3F2C4287ADF1DD15 /* ge_precomp_0.c in Sources */ = {isa = PBXBuildFile; fileRef = 8F89863ED4DC457FB481A1C4 /* ge_precomp_0.c */; };
+		EBDB5D72F70242DD8F7B2EAC /* signal_protocol.c in Sources */ = {isa = PBXBuildFile; fileRef = C225D1994AE2485C97186C52 /* signal_protocol.c */; };
+		EE1C8BD71FC5498EBF1D1A79 /* protocol.c in Sources */ = {isa = PBXBuildFile; fileRef = D66A69823EEC497E942FE663 /* protocol.c */; };
+		F358258EDB014D4CA67F7E8B /* sign_modified.c in Sources */ = {isa = PBXBuildFile; fileRef = 019711103BA243EC854DC2D6 /* sign_modified.c */; };
+		F47CD27202AF44B2A0A20ADD /* WhisperTextProtocol.pb-c.c in Sources */ = {isa = PBXBuildFile; fileRef = D63AA9A347AB4D7C9A2D29A7 /* WhisperTextProtocol.pb-c.c */; };
+		F6FBEEB34B744E179E72FE8A /* ge_frombytes.c in Sources */ = {isa = PBXBuildFile; fileRef = E89183D116024D4D8F53A736 /* ge_frombytes.c */; };
+		FC9801F3DEB043F9835A04D4 /* device_consistency.c in Sources */ = {isa = PBXBuildFile; fileRef = 69AD6466AACD4A159F3667F0 /* device_consistency.c */; };
+		FD5722E2CE3A4D438FFFADD4 /* ge_scalarmult_cofactor.c in Sources */ = {isa = PBXBuildFile; fileRef = 42BB06B34A8D4FEBB8D42C7A /* ge_scalarmult_cofactor.c */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1505C83567384B14A6481406 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 787E2BC2383E465B908DD90E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4AA728E19BFB4E369FBBAD3D;
+			remoteInfo = ZERO_CHECK;
+		};
+		2258E955DCBD4499877FF551 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 787E2BC2383E465B908DD90E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4BACC4AFB2594B97BAFEDF31;
+			remoteInfo = ALL_BUILD;
+		};
+		229CCBC7C76944129B9E8D54 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 787E2BC2383E465B908DD90E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0F0D919576E34832881E5A4A;
+			remoteInfo = curve25519;
+		};
+		47D5508414B04AADBB31E6C1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 787E2BC2383E465B908DD90E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4AA728E19BFB4E369FBBAD3D;
+			remoteInfo = ZERO_CHECK;
+		};
+		5FD2C58DE57D48A58F6237D2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 787E2BC2383E465B908DD90E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 63436188D3A044CEAE7AA207;
+			remoteInfo = "protobuf-c";
+		};
+		7E58D031CF9D4EBF943871CC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 787E2BC2383E465B908DD90E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4AA728E19BFB4E369FBBAD3D;
+			remoteInfo = ZERO_CHECK;
+		};
+		87E543D35862470B8FC8B979 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 787E2BC2383E465B908DD90E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 63436188D3A044CEAE7AA207;
+			remoteInfo = "protobuf-c";
+		};
+		98180A8F13114201B1DED9D1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 787E2BC2383E465B908DD90E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 23387E184D7C4CC8AF1CBA90;
+			remoteInfo = "signal-protocol-c";
+		};
+		DCFF17DBB5E847BE9AE6FCB0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 787E2BC2383E465B908DD90E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0F0D919576E34832881E5A4A;
+			remoteInfo = curve25519;
+		};
+		FA07DA37E74A46FFAD88F158 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 787E2BC2383E465B908DD90E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4AA728E19BFB4E369FBBAD3D;
+			remoteInfo = ZERO_CHECK;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		00AB81583DCA4775ADB367F6 /* blocks.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = blocks.c; path = src/curve25519/ed25519/nacl_sha512/blocks.c; sourceTree = SOURCE_ROOT; };
+		0162B8CF26D94A66AF84EC5D /* fe_copy.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = fe_copy.c; path = src/curve25519/ed25519/fe_copy.c; sourceTree = SOURCE_ROOT; };
+		019711103BA243EC854DC2D6 /* sign_modified.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = sign_modified.c; path = src/curve25519/ed25519/additions/sign_modified.c; sourceTree = SOURCE_ROOT; };
+		01D73C1657C7437EB6FC6AEF /* session_record.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = session_record.c; path = src/session_record.c; sourceTree = SOURCE_ROOT; };
+		02EBC49D558B40A6B61C3E21 /* ratchet.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ratchet.h; path = src/ratchet.h; sourceTree = SOURCE_ROOT; };
+		06AA581948E047C5B5FE8085 /* fe_1.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = fe_1.c; path = src/curve25519/ed25519/fe_1.c; sourceTree = SOURCE_ROOT; };
+		086C231760B840149B01D620 /* sender_key.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = sender_key.c; path = src/sender_key.c; sourceTree = SOURCE_ROOT; };
+		09A60FA6DCFE4157B4C6DF5E /* sc_clamp.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = sc_clamp.c; path = src/curve25519/ed25519/additions/sc_clamp.c; sourceTree = SOURCE_ROOT; };
+		0A4B79116E354351A434E0B0 /* sign.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = sign.c; path = src/curve25519/ed25519/sign.c; sourceTree = SOURCE_ROOT; };
+		0CE2146C7F5140CDA8FE144E /* ge_add.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = ge_add.c; path = src/curve25519/ed25519/ge_add.c; sourceTree = SOURCE_ROOT; };
+		0DC6B074875A42728DDA50AB /* sender_key_state.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = sender_key_state.c; path = src/sender_key_state.c; sourceTree = SOURCE_ROOT; };
+		14DAB8B0822B4F7FBE39652D /* sender_key_record.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = sender_key_record.c; path = src/sender_key_record.c; sourceTree = SOURCE_ROOT; };
+		15A0012F1FD340418FAD60F0 /* sc_isreduced.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = sc_isreduced.c; path = src/curve25519/ed25519/additions/generalized/sc_isreduced.c; sourceTree = SOURCE_ROOT; };
+		16FB3EBC331C4BADB09FE898 /* ge_p3_tobytes.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = ge_p3_tobytes.c; path = src/curve25519/ed25519/ge_p3_tobytes.c; sourceTree = SOURCE_ROOT; };
+		1E6BB923C99245DD90694644 /* fe_sq2.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = fe_sq2.c; path = src/curve25519/ed25519/fe_sq2.c; sourceTree = SOURCE_ROOT; };
+		21BB61257C03430792D6E677 /* session_state.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = session_state.c; path = src/session_state.c; sourceTree = SOURCE_ROOT; };
+		2506B0A4091440F7BA53E30F /* FingerprintProtocol.pb-c.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = "FingerprintProtocol.pb-c.c"; path = "src/FingerprintProtocol.pb-c.c"; sourceTree = SOURCE_ROOT; };
+		2529E45FED7444CFB3CBFBE0 /* ge_double_scalarmult.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = ge_double_scalarmult.c; path = src/curve25519/ed25519/ge_double_scalarmult.c; sourceTree = SOURCE_ROOT; };
+		25DCE22F7E65492885807634 /* ge_msub.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = ge_msub.c; path = src/curve25519/ed25519/ge_msub.c; sourceTree = SOURCE_ROOT; };
+		27985F6E89364B55A12394A2 /* LocalStorageProtocol.pb-c.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = "LocalStorageProtocol.pb-c.c"; path = "src/LocalStorageProtocol.pb-c.c"; sourceTree = SOURCE_ROOT; };
+		279916BDB2114FDF9C57163F /* sender_key.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = sender_key.h; path = src/sender_key.h; sourceTree = SOURCE_ROOT; };
+		2A8E2326B05D45898FA072E0 /* session_builder.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = session_builder.h; path = src/session_builder.h; sourceTree = SOURCE_ROOT; };
+		2AE1BC9B859B4C24AAB0EBED /* fe_isreduced.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = fe_isreduced.c; path = src/curve25519/ed25519/additions/fe_isreduced.c; sourceTree = SOURCE_ROOT; };
+		2CB19A3381034904A0BF45F9 /* xeddsa.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = xeddsa.c; path = src/curve25519/ed25519/additions/xeddsa.c; sourceTree = SOURCE_ROOT; };
+		2E47BA86F217466F8FF813C7 /* fe_cmov.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = fe_cmov.c; path = src/curve25519/ed25519/fe_cmov.c; sourceTree = SOURCE_ROOT; };
+		2FEEBCCBD4C44118944D6FE4 /* group_session_builder.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = group_session_builder.c; path = src/group_session_builder.c; sourceTree = SOURCE_ROOT; };
+		306B93652EBA48FBADAD3984 /* sc_cmov.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = sc_cmov.c; path = src/curve25519/ed25519/additions/sc_cmov.c; sourceTree = SOURCE_ROOT; };
+		33CA9C5422FB450BA6780D5C /* gen_labelset.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = gen_labelset.c; path = src/curve25519/ed25519/additions/generalized/gen_labelset.c; sourceTree = SOURCE_ROOT; };
+		34E708D2F37A4F09862ECCE2 /* vpool.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = vpool.c; path = src/vpool.c; sourceTree = SOURCE_ROOT; };
+		359A6D8F2A8F4AC69D5087BF /* fingerprint.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = fingerprint.c; path = src/fingerprint.c; sourceTree = SOURCE_ROOT; };
+		388E5B9AEB9545DB904BF177 /* ge_tobytes.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = ge_tobytes.c; path = src/curve25519/ed25519/ge_tobytes.c; sourceTree = SOURCE_ROOT; };
+		38F2D11CC3224F37A0CB4417 /* fe_add.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = fe_add.c; path = src/curve25519/ed25519/fe_add.c; sourceTree = SOURCE_ROOT; };
+		3C41FA3AC42F4ECBA6109909 /* ge_sub.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = ge_sub.c; path = src/curve25519/ed25519/ge_sub.c; sourceTree = SOURCE_ROOT; };
+		3FBAE32C2C944A2198FA5066 /* CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; lastKnownFileType = text; name = CMakeLists.txt; path = "src/protobuf-c/CMakeLists.txt"; sourceTree = SOURCE_ROOT; };
+		4028279F436A4214A580A943 /* fe_mont_rhs.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = fe_mont_rhs.c; path = src/curve25519/ed25519/additions/fe_mont_rhs.c; sourceTree = SOURCE_ROOT; };
+		409BB24F971F4538A2946968 /* fe_sq.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = fe_sq.c; path = src/curve25519/ed25519/fe_sq.c; sourceTree = SOURCE_ROOT; };
+		41EEDA0953BE472EB0354760 /* group_cipher.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = group_cipher.h; path = src/group_cipher.h; sourceTree = SOURCE_ROOT; };
+		4248502321024247AC4385C3 /* session_builder.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = session_builder.c; path = src/session_builder.c; sourceTree = SOURCE_ROOT; };
+		42BB06B34A8D4FEBB8D42C7A /* ge_scalarmult_cofactor.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = ge_scalarmult_cofactor.c; path = src/curve25519/ed25519/additions/ge_scalarmult_cofactor.c; sourceTree = SOURCE_ROOT; };
+		42E4B9BB50004520909B6A99 /* ge_p3_to_p2.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = ge_p3_to_p2.c; path = src/curve25519/ed25519/ge_p3_to_p2.c; sourceTree = SOURCE_ROOT; };
+		4513D218E6CE4A4DBED39BD9 /* ge_p1p1_to_p3.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = ge_p1p1_to_p3.c; path = src/curve25519/ed25519/ge_p1p1_to_p3.c; sourceTree = SOURCE_ROOT; };
+		4677C344C2D74C10B613BEC2 /* keygen.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = keygen.c; path = src/curve25519/ed25519/additions/keygen.c; sourceTree = SOURCE_ROOT; };
+		474F5CE67CDB4F28AFAAB8FF /* utility.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = utility.c; path = src/curve25519/ed25519/additions/utility.c; sourceTree = SOURCE_ROOT; };
+		4A5C204C8A9C44BD9971AA92 /* ge_neg.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = ge_neg.c; path = src/curve25519/ed25519/additions/ge_neg.c; sourceTree = SOURCE_ROOT; };
+		4E7DF42CD600415393B3F039 /* open.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = open.c; path = src/curve25519/ed25519/open.c; sourceTree = SOURCE_ROOT; };
+		5031D93233CD48CDB352FF48 /* ge_p3_to_montx.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = ge_p3_to_montx.c; path = src/curve25519/ed25519/additions/ge_p3_to_montx.c; sourceTree = SOURCE_ROOT; };
+		51087C30D5594D6CA2E70918 /* curve_sigs.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = curve_sigs.c; path = src/curve25519/ed25519/additions/curve_sigs.c; sourceTree = SOURCE_ROOT; };
+		512E549FD22A45ED97A00F3A /* key_helper.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = key_helper.h; path = src/key_helper.h; sourceTree = SOURCE_ROOT; };
+		516A572EF9354E7BA9E0E6FD /* hkdf.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = hkdf.h; path = src/hkdf.h; sourceTree = SOURCE_ROOT; };
+		5336003AC5314ED2BF77C219 /* fe_isequal.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = fe_isequal.c; path = src/curve25519/ed25519/additions/fe_isequal.c; sourceTree = SOURCE_ROOT; };
+		55A8D7E8D194460286E89290 /* fe_mul.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = fe_mul.c; path = src/curve25519/ed25519/fe_mul.c; sourceTree = SOURCE_ROOT; };
+		58845E668D68491E81C98BA9 /* ge_p3_0.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = ge_p3_0.c; path = src/curve25519/ed25519/ge_p3_0.c; sourceTree = SOURCE_ROOT; };
+		596267BD5FCF4B4A81884977 /* libsignal-protocol-c.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libsignal-protocol-c.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		62BF6A22B89E4477A7ED8BEC /* vpool.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = vpool.h; path = src/vpool.h; sourceTree = SOURCE_ROOT; };
+		62E763A28022480E8415A15F /* compare.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = compare.c; path = src/curve25519/ed25519/additions/compare.c; sourceTree = SOURCE_ROOT; };
+		6806B906F311433AA7D3F3AE /* session_cipher.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = session_cipher.c; path = src/session_cipher.c; sourceTree = SOURCE_ROOT; };
+		69966F60DB274033A7FEC416 /* ge_isneutral.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = ge_isneutral.c; path = src/curve25519/ed25519/additions/ge_isneutral.c; sourceTree = SOURCE_ROOT; };
+		69AD6466AACD4A159F3667F0 /* device_consistency.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = device_consistency.c; path = src/device_consistency.c; sourceTree = SOURCE_ROOT; };
+		6A6D6DC04F164615BBE6EB63 /* fe_isnegative.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = fe_isnegative.c; path = src/curve25519/ed25519/fe_isnegative.c; sourceTree = SOURCE_ROOT; };
+		6C6E8EA90FE344969D1641F8 /* session_builder_internal.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = session_builder_internal.h; path = src/session_builder_internal.h; sourceTree = SOURCE_ROOT; };
+		6CFDAB51719E4AC5B412102A /* fe_neg.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = fe_neg.c; path = src/curve25519/ed25519/fe_neg.c; sourceTree = SOURCE_ROOT; };
+		72C145DD05594F6098C425A6 /* ge_p3_to_cached.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = ge_p3_to_cached.c; path = src/curve25519/ed25519/ge_p3_to_cached.c; sourceTree = SOURCE_ROOT; };
+		7607E8CE8194472A81E24615 /* ge_scalarmult_base.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = ge_scalarmult_base.c; path = src/curve25519/ed25519/ge_scalarmult_base.c; sourceTree = SOURCE_ROOT; };
+		7661D26C12BE4631A9242116 /* session_pre_key.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = session_pre_key.h; path = src/session_pre_key.h; sourceTree = SOURCE_ROOT; };
+		78240158203E470AA52E11D2 /* ge_madd.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = ge_madd.c; path = src/curve25519/ed25519/ge_madd.c; sourceTree = SOURCE_ROOT; };
+		801E9B44EA5C41499667E8D6 /* sc_muladd.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = sc_muladd.c; path = src/curve25519/ed25519/sc_muladd.c; sourceTree = SOURCE_ROOT; };
+		81F482C5C6FC4D358B6F22B9 /* group_cipher.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = group_cipher.c; path = src/group_cipher.c; sourceTree = SOURCE_ROOT; };
+		88C6441AD0EE4602AA03501C /* ratchet.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = ratchet.c; path = src/ratchet.c; sourceTree = SOURCE_ROOT; };
+		8CBD61E820CD4317BA412546 /* key_helper.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = key_helper.c; path = src/key_helper.c; sourceTree = SOURCE_ROOT; };
+		8E594AE89164465DBD4D7135 /* libcurve25519.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libcurve25519.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		8F89863ED4DC457FB481A1C4 /* ge_precomp_0.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = ge_precomp_0.c; path = src/curve25519/ed25519/ge_precomp_0.c; sourceTree = SOURCE_ROOT; };
+		929D3684F54E427E911D0208 /* protocol.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = protocol.h; path = src/protocol.h; sourceTree = SOURCE_ROOT; };
+		932FD893A22B40E1A35F7769 /* group_session_builder.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = group_session_builder.h; path = src/group_session_builder.h; sourceTree = SOURCE_ROOT; };
+		9427520610BB429EA18E4896 /* CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; lastKnownFileType = text; name = CMakeLists.txt; path = src/CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		9697ACB78D04411E82240308 /* signal_protocol.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = signal_protocol.h; path = src/signal_protocol.h; sourceTree = SOURCE_ROOT; };
+		9C4C538378164BACBE9A57DE /* fe_invert.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = fe_invert.c; path = src/curve25519/ed25519/fe_invert.c; sourceTree = SOURCE_ROOT; };
+		9D5896282DA740D9B0DDFA19 /* fe_isnonzero.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = fe_isnonzero.c; path = src/curve25519/ed25519/fe_isnonzero.c; sourceTree = SOURCE_ROOT; };
+		9EEAFB8BA2934C4EAADE34A2 /* sc_neg.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = sc_neg.c; path = src/curve25519/ed25519/additions/sc_neg.c; sourceTree = SOURCE_ROOT; };
+		A131B33BAF584543A878CA3C /* sender_key_record.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = sender_key_record.h; path = src/sender_key_record.h; sourceTree = SOURCE_ROOT; };
+		A33193A0403E4394A270E105 /* fe_tobytes.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = fe_tobytes.c; path = src/curve25519/ed25519/fe_tobytes.c; sourceTree = SOURCE_ROOT; };
+		A5B3F9D6FD7742BF8C6D7D90 /* ge_scalarmult.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = ge_scalarmult.c; path = src/curve25519/ed25519/additions/ge_scalarmult.c; sourceTree = SOURCE_ROOT; };
+		A6A5A808E4874C22811EAF21 /* gen_eddsa.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = gen_eddsa.c; path = src/curve25519/ed25519/additions/generalized/gen_eddsa.c; sourceTree = SOURCE_ROOT; };
+		AB176A7AA7C842C682BA2652 /* fingerprint.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fingerprint.h; path = src/fingerprint.h; sourceTree = SOURCE_ROOT; };
+		AD777D4DE3A441748BFBEE3D /* sc_reduce.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = sc_reduce.c; path = src/curve25519/ed25519/sc_reduce.c; sourceTree = SOURCE_ROOT; };
+		ADE93B4876FE4EBEB9590191 /* ge_p3_dbl.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = ge_p3_dbl.c; path = src/curve25519/ed25519/ge_p3_dbl.c; sourceTree = SOURCE_ROOT; };
+		B6D936FE6B3A4D74A5893C3D /* session_record.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = session_record.h; path = src/session_record.h; sourceTree = SOURCE_ROOT; };
+		BB61C72D29154B35BB7067F0 /* ge_p1p1_to_p2.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = ge_p1p1_to_p2.c; path = src/curve25519/ed25519/ge_p1p1_to_p2.c; sourceTree = SOURCE_ROOT; };
+		C225D1994AE2485C97186C52 /* signal_protocol.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = signal_protocol.c; path = src/signal_protocol.c; sourceTree = SOURCE_ROOT; };
+		C482204586E64DB2B573109A /* ge_p3_add.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = ge_p3_add.c; path = src/curve25519/ed25519/additions/generalized/ge_p3_add.c; sourceTree = SOURCE_ROOT; };
+		C5226EA0238A4AD5874BEAD8 /* hkdf.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = hkdf.c; path = src/hkdf.c; sourceTree = SOURCE_ROOT; };
+		C54572C2F3C5442EB54C5660 /* session_pre_key.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = session_pre_key.c; path = src/session_pre_key.c; sourceTree = SOURCE_ROOT; };
+		CA462AE5CAA54CB3846A39C3 /* session_cipher.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = session_cipher.h; path = src/session_cipher.h; sourceTree = SOURCE_ROOT; };
+		CAD30896663A456BA72D90E5 /* device_consistency.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = device_consistency.h; path = src/device_consistency.h; sourceTree = SOURCE_ROOT; };
+		CD444BE3E9414AF0B4F87679 /* fe_0.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = fe_0.c; path = src/curve25519/ed25519/fe_0.c; sourceTree = SOURCE_ROOT; };
+		D0E2568F5D6F4511854EE5B3 /* CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; lastKnownFileType = text; name = CMakeLists.txt; path = src/curve25519/CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		D2FA9CD0C9AB453AA50E4B22 /* signal_protocol_types.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = signal_protocol_types.h; path = src/signal_protocol_types.h; sourceTree = SOURCE_ROOT; };
+		D58823EFE78F41B6B3C94A32 /* gen_x.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = gen_x.c; path = src/curve25519/ed25519/additions/generalized/gen_x.c; sourceTree = SOURCE_ROOT; };
+		D63AA9A347AB4D7C9A2D29A7 /* WhisperTextProtocol.pb-c.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = "WhisperTextProtocol.pb-c.c"; path = "src/WhisperTextProtocol.pb-c.c"; sourceTree = SOURCE_ROOT; };
+		D66A69823EEC497E942FE663 /* protocol.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = protocol.c; path = src/protocol.c; sourceTree = SOURCE_ROOT; };
+		D7DB554E87174379A94F87AD /* fe_sqrt.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = fe_sqrt.c; path = src/curve25519/ed25519/additions/fe_sqrt.c; sourceTree = SOURCE_ROOT; };
+		DE191B9C030F4A9F8AF8DA6E /* fe_sub.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = fe_sub.c; path = src/curve25519/ed25519/fe_sub.c; sourceTree = SOURCE_ROOT; };
+		E039383ADABA419099EA0EA5 /* session_state.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = session_state.h; path = src/session_state.h; sourceTree = SOURCE_ROOT; };
+		E3CB802602CA4D3ABD2EF48E /* ge_montx_to_p3.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = ge_montx_to_p3.c; path = src/curve25519/ed25519/additions/ge_montx_to_p3.c; sourceTree = SOURCE_ROOT; };
+		E40F5A7E4B6142DEB0A205B3 /* point_isreduced.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = point_isreduced.c; path = src/curve25519/ed25519/additions/generalized/point_isreduced.c; sourceTree = SOURCE_ROOT; };
+		E434642BB8E24F828BAF078D /* signal_protocol_internal.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = signal_protocol_internal.h; path = src/signal_protocol_internal.h; sourceTree = SOURCE_ROOT; };
+		E89183D116024D4D8F53A736 /* ge_frombytes.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = ge_frombytes.c; path = src/curve25519/ed25519/ge_frombytes.c; sourceTree = SOURCE_ROOT; };
+		E95F927563CB4BF58AA28973 /* gen_veddsa.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = gen_veddsa.c; path = src/curve25519/ed25519/additions/generalized/gen_veddsa.c; sourceTree = SOURCE_ROOT; };
+		EA19FC3726BC4299919B3B70 /* internal_fast_tests.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = internal_fast_tests.c; path = src/curve25519/ed25519/tests/internal_fast_tests.c; sourceTree = SOURCE_ROOT; };
+		EB8729966FEE474FA62DF648 /* CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; lastKnownFileType = text; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		EC83475BBDBC4C4D85A6E1B6 /* open_modified.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = open_modified.c; path = src/curve25519/ed25519/additions/open_modified.c; sourceTree = SOURCE_ROOT; };
+		ED7ECA610C2E42D8B27D4ADF /* fe_montx_to_edy.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = fe_montx_to_edy.c; path = src/curve25519/ed25519/additions/fe_montx_to_edy.c; sourceTree = SOURCE_ROOT; };
+		EFAA4F6E22A6444692F8BC75 /* fe_pow22523.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = fe_pow22523.c; path = src/curve25519/ed25519/fe_pow22523.c; sourceTree = SOURCE_ROOT; };
+		F112F2A862644F18AEEE4E67 /* libprotobuf-c.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libprotobuf-c.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F4B47E6E59C94AB0BE962445 /* curve25519-donna.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = "curve25519-donna.c"; path = "src/curve25519/curve25519-donna.c"; sourceTree = SOURCE_ROOT; };
+		F5796CC684014E5C852F2CEE /* protobuf-c.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = "protobuf-c.c"; path = "src/protobuf-c/protobuf-c.c"; sourceTree = SOURCE_ROOT; };
+		F7C036AD68424CC1B346AD73 /* hash.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = hash.c; path = src/curve25519/ed25519/nacl_sha512/hash.c; sourceTree = SOURCE_ROOT; };
+		F8449D90D56240DC84231B9A /* sender_key_state.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = sender_key_state.h; path = src/sender_key_state.h; sourceTree = SOURCE_ROOT; };
+		F982625D74924CB68BCB3C80 /* zeroize.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = zeroize.c; path = src/curve25519/ed25519/additions/zeroize.c; sourceTree = SOURCE_ROOT; };
+		FBD10651ACC64E71B2BDAF60 /* elligator.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = elligator.c; path = src/curve25519/ed25519/additions/elligator.c; sourceTree = SOURCE_ROOT; };
+		FCAAC5964DE74CA2AC4951D4 /* ge_p2_0.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = ge_p2_0.c; path = src/curve25519/ed25519/ge_p2_0.c; sourceTree = SOURCE_ROOT; };
+		FEFCD0E175E34AB3A8D9ACE0 /* ge_p2_dbl.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = ge_p2_dbl.c; path = src/curve25519/ed25519/ge_p2_dbl.c; sourceTree = SOURCE_ROOT; };
+		FF03915EAD7841ECBBE091FE /* curve.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = curve.c; path = src/curve.c; sourceTree = SOURCE_ROOT; };
+		FF3052A413304E6BA6373015 /* curve.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = curve.h; path = src/curve.h; sourceTree = SOURCE_ROOT; };
+		FF560E123C3847AE8F2EDC49 /* fe_frombytes.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = fe_frombytes.c; path = src/curve25519/ed25519/fe_frombytes.c; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		18DD6EE2229D48FEB6FDC35E = {
+			isa = PBXGroup;
+			children = (
+				4780D024EC4247A3BB54CDD5 /* ALL_BUILD */,
+				C831BE90940044A1AF9A7C1A /* signal-protocol-c */,
+				5A12E39FC3124A4F89F9F5D4 /* curve25519 */,
+				C3B9738EB1DE4D9594E6F741 /* protobuf-c */,
+				51372D28941345CDB935979A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		22B6700DA6074675A30E9B95 /* Header Files */ = {
+			isa = PBXGroup;
+			children = (
+				FF3052A413304E6BA6373015 /* curve.h */,
+				CAD30896663A456BA72D90E5 /* device_consistency.h */,
+				AB176A7AA7C842C682BA2652 /* fingerprint.h */,
+				41EEDA0953BE472EB0354760 /* group_cipher.h */,
+				932FD893A22B40E1A35F7769 /* group_session_builder.h */,
+				516A572EF9354E7BA9E0E6FD /* hkdf.h */,
+				512E549FD22A45ED97A00F3A /* key_helper.h */,
+				929D3684F54E427E911D0208 /* protocol.h */,
+				02EBC49D558B40A6B61C3E21 /* ratchet.h */,
+				279916BDB2114FDF9C57163F /* sender_key.h */,
+				A131B33BAF584543A878CA3C /* sender_key_record.h */,
+				F8449D90D56240DC84231B9A /* sender_key_state.h */,
+				2A8E2326B05D45898FA072E0 /* session_builder.h */,
+				6C6E8EA90FE344969D1641F8 /* session_builder_internal.h */,
+				CA462AE5CAA54CB3846A39C3 /* session_cipher.h */,
+				7661D26C12BE4631A9242116 /* session_pre_key.h */,
+				B6D936FE6B3A4D74A5893C3D /* session_record.h */,
+				E039383ADABA419099EA0EA5 /* session_state.h */,
+				9697ACB78D04411E82240308 /* signal_protocol.h */,
+				E434642BB8E24F828BAF078D /* signal_protocol_internal.h */,
+				D2FA9CD0C9AB453AA50E4B22 /* signal_protocol_types.h */,
+				62BF6A22B89E4477A7ED8BEC /* vpool.h */,
+			);
+			name = "Header Files";
+			sourceTree = "<group>";
+		};
+		3ECCF66EC054493480563BBB /* CMake Rules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "CMake Rules";
+			sourceTree = "<group>";
+		};
+		4780D024EC4247A3BB54CDD5 /* ALL_BUILD */ = {
+			isa = PBXGroup;
+			children = (
+				3ECCF66EC054493480563BBB /* CMake Rules */,
+				EB8729966FEE474FA62DF648 /* CMakeLists.txt */,
+			);
+			name = ALL_BUILD;
+			sourceTree = "<group>";
+		};
+		4969DD082F9B47E4AE1006E3 /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				F4B47E6E59C94AB0BE962445 /* curve25519-donna.c */,
+				62E763A28022480E8415A15F /* compare.c */,
+				51087C30D5594D6CA2E70918 /* curve_sigs.c */,
+				FBD10651ACC64E71B2BDAF60 /* elligator.c */,
+				5336003AC5314ED2BF77C219 /* fe_isequal.c */,
+				2AE1BC9B859B4C24AAB0EBED /* fe_isreduced.c */,
+				4028279F436A4214A580A943 /* fe_mont_rhs.c */,
+				ED7ECA610C2E42D8B27D4ADF /* fe_montx_to_edy.c */,
+				D7DB554E87174379A94F87AD /* fe_sqrt.c */,
+				69966F60DB274033A7FEC416 /* ge_isneutral.c */,
+				E3CB802602CA4D3ABD2EF48E /* ge_montx_to_p3.c */,
+				4A5C204C8A9C44BD9971AA92 /* ge_neg.c */,
+				5031D93233CD48CDB352FF48 /* ge_p3_to_montx.c */,
+				A5B3F9D6FD7742BF8C6D7D90 /* ge_scalarmult.c */,
+				42BB06B34A8D4FEBB8D42C7A /* ge_scalarmult_cofactor.c */,
+				C482204586E64DB2B573109A /* ge_p3_add.c */,
+				A6A5A808E4874C22811EAF21 /* gen_eddsa.c */,
+				33CA9C5422FB450BA6780D5C /* gen_labelset.c */,
+				E95F927563CB4BF58AA28973 /* gen_veddsa.c */,
+				D58823EFE78F41B6B3C94A32 /* gen_x.c */,
+				E40F5A7E4B6142DEB0A205B3 /* point_isreduced.c */,
+				15A0012F1FD340418FAD60F0 /* sc_isreduced.c */,
+				4677C344C2D74C10B613BEC2 /* keygen.c */,
+				EC83475BBDBC4C4D85A6E1B6 /* open_modified.c */,
+				09A60FA6DCFE4157B4C6DF5E /* sc_clamp.c */,
+				306B93652EBA48FBADAD3984 /* sc_cmov.c */,
+				9EEAFB8BA2934C4EAADE34A2 /* sc_neg.c */,
+				019711103BA243EC854DC2D6 /* sign_modified.c */,
+				474F5CE67CDB4F28AFAAB8FF /* utility.c */,
+				2CB19A3381034904A0BF45F9 /* xeddsa.c */,
+				F982625D74924CB68BCB3C80 /* zeroize.c */,
+				CD444BE3E9414AF0B4F87679 /* fe_0.c */,
+				06AA581948E047C5B5FE8085 /* fe_1.c */,
+				38F2D11CC3224F37A0CB4417 /* fe_add.c */,
+				2E47BA86F217466F8FF813C7 /* fe_cmov.c */,
+				0162B8CF26D94A66AF84EC5D /* fe_copy.c */,
+				FF560E123C3847AE8F2EDC49 /* fe_frombytes.c */,
+				9C4C538378164BACBE9A57DE /* fe_invert.c */,
+				6A6D6DC04F164615BBE6EB63 /* fe_isnegative.c */,
+				9D5896282DA740D9B0DDFA19 /* fe_isnonzero.c */,
+				55A8D7E8D194460286E89290 /* fe_mul.c */,
+				6CFDAB51719E4AC5B412102A /* fe_neg.c */,
+				EFAA4F6E22A6444692F8BC75 /* fe_pow22523.c */,
+				409BB24F971F4538A2946968 /* fe_sq.c */,
+				1E6BB923C99245DD90694644 /* fe_sq2.c */,
+				DE191B9C030F4A9F8AF8DA6E /* fe_sub.c */,
+				A33193A0403E4394A270E105 /* fe_tobytes.c */,
+				0CE2146C7F5140CDA8FE144E /* ge_add.c */,
+				2529E45FED7444CFB3CBFBE0 /* ge_double_scalarmult.c */,
+				E89183D116024D4D8F53A736 /* ge_frombytes.c */,
+				78240158203E470AA52E11D2 /* ge_madd.c */,
+				25DCE22F7E65492885807634 /* ge_msub.c */,
+				BB61C72D29154B35BB7067F0 /* ge_p1p1_to_p2.c */,
+				4513D218E6CE4A4DBED39BD9 /* ge_p1p1_to_p3.c */,
+				FCAAC5964DE74CA2AC4951D4 /* ge_p2_0.c */,
+				FEFCD0E175E34AB3A8D9ACE0 /* ge_p2_dbl.c */,
+				58845E668D68491E81C98BA9 /* ge_p3_0.c */,
+				ADE93B4876FE4EBEB9590191 /* ge_p3_dbl.c */,
+				72C145DD05594F6098C425A6 /* ge_p3_to_cached.c */,
+				42E4B9BB50004520909B6A99 /* ge_p3_to_p2.c */,
+				16FB3EBC331C4BADB09FE898 /* ge_p3_tobytes.c */,
+				8F89863ED4DC457FB481A1C4 /* ge_precomp_0.c */,
+				7607E8CE8194472A81E24615 /* ge_scalarmult_base.c */,
+				3C41FA3AC42F4ECBA6109909 /* ge_sub.c */,
+				388E5B9AEB9545DB904BF177 /* ge_tobytes.c */,
+				00AB81583DCA4775ADB367F6 /* blocks.c */,
+				F7C036AD68424CC1B346AD73 /* hash.c */,
+				4E7DF42CD600415393B3F039 /* open.c */,
+				801E9B44EA5C41499667E8D6 /* sc_muladd.c */,
+				AD777D4DE3A441748BFBEE3D /* sc_reduce.c */,
+				0A4B79116E354351A434E0B0 /* sign.c */,
+				EA19FC3726BC4299919B3B70 /* internal_fast_tests.c */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		50D630994FC94A75BECFD4DD /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				F5796CC684014E5C852F2CEE /* protobuf-c.c */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		51372D28941345CDB935979A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				596267BD5FCF4B4A81884977 /* libsignal-protocol-c.a */,
+				8E594AE89164465DBD4D7135 /* libcurve25519.a */,
+				F112F2A862644F18AEEE4E67 /* libprotobuf-c.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5A12E39FC3124A4F89F9F5D4 /* curve25519 */ = {
+			isa = PBXGroup;
+			children = (
+				4969DD082F9B47E4AE1006E3 /* Source Files */,
+				D0E2568F5D6F4511854EE5B3 /* CMakeLists.txt */,
+			);
+			name = curve25519;
+			sourceTree = "<group>";
+		};
+		BF426C7BD2894776BEA61B4E /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				2506B0A4091440F7BA53E30F /* FingerprintProtocol.pb-c.c */,
+				27985F6E89364B55A12394A2 /* LocalStorageProtocol.pb-c.c */,
+				D63AA9A347AB4D7C9A2D29A7 /* WhisperTextProtocol.pb-c.c */,
+				FF03915EAD7841ECBBE091FE /* curve.c */,
+				69AD6466AACD4A159F3667F0 /* device_consistency.c */,
+				359A6D8F2A8F4AC69D5087BF /* fingerprint.c */,
+				81F482C5C6FC4D358B6F22B9 /* group_cipher.c */,
+				2FEEBCCBD4C44118944D6FE4 /* group_session_builder.c */,
+				C5226EA0238A4AD5874BEAD8 /* hkdf.c */,
+				8CBD61E820CD4317BA412546 /* key_helper.c */,
+				D66A69823EEC497E942FE663 /* protocol.c */,
+				88C6441AD0EE4602AA03501C /* ratchet.c */,
+				086C231760B840149B01D620 /* sender_key.c */,
+				14DAB8B0822B4F7FBE39652D /* sender_key_record.c */,
+				0DC6B074875A42728DDA50AB /* sender_key_state.c */,
+				4248502321024247AC4385C3 /* session_builder.c */,
+				6806B906F311433AA7D3F3AE /* session_cipher.c */,
+				C54572C2F3C5442EB54C5660 /* session_pre_key.c */,
+				01D73C1657C7437EB6FC6AEF /* session_record.c */,
+				21BB61257C03430792D6E677 /* session_state.c */,
+				C225D1994AE2485C97186C52 /* signal_protocol.c */,
+				34E708D2F37A4F09862ECCE2 /* vpool.c */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		C3B9738EB1DE4D9594E6F741 /* protobuf-c */ = {
+			isa = PBXGroup;
+			children = (
+				50D630994FC94A75BECFD4DD /* Source Files */,
+				3FBAE32C2C944A2198FA5066 /* CMakeLists.txt */,
+			);
+			name = "protobuf-c";
+			sourceTree = "<group>";
+		};
+		C831BE90940044A1AF9A7C1A /* signal-protocol-c */ = {
+			isa = PBXGroup;
+			children = (
+				BF426C7BD2894776BEA61B4E /* Source Files */,
+				22B6700DA6074675A30E9B95 /* Header Files */,
+				9427520610BB429EA18E4896 /* CMakeLists.txt */,
+			);
+			name = "signal-protocol-c";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0F0D919576E34832881E5A4A /* curve25519 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FCF023FD3D084516A908B075 /* Build configuration list for PBXNativeTarget "curve25519" */;
+			buildPhases = (
+				CD1B0E31CE5D4C2AAC80EF1B /* Sources */,
+				2E05B5C974A146F89867A3E3 /* CMake PostBuild Rules */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7168CAD59E854F22BAF936A9 /* PBXTargetDependency */,
+			);
+			name = curve25519;
+			productName = curve25519;
+			productReference = 8E594AE89164465DBD4D7135 /* libcurve25519.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		23387E184D7C4CC8AF1CBA90 /* signal-protocol-c */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B8C3A10E896345EA8A7DF020 /* Build configuration list for PBXNativeTarget "signal-protocol-c" */;
+			buildPhases = (
+				58A9E138D5504FF3AA1E61E9 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8DE979FEADEB43A1986F9C47 /* PBXTargetDependency */,
+				754F01D7DA1F4D60AC5B705E /* PBXTargetDependency */,
+				172C38D89A2D419CB4CC5286 /* PBXTargetDependency */,
+			);
+			name = "signal-protocol-c";
+			productName = "signal-protocol-c";
+			productReference = 596267BD5FCF4B4A81884977 /* libsignal-protocol-c.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		63436188D3A044CEAE7AA207 /* protobuf-c */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 482E27F0855F423AA43C75A0 /* Build configuration list for PBXNativeTarget "protobuf-c" */;
+			buildPhases = (
+				C309A7CE74254FAB8458A053 /* Sources */,
+				33D36DF5CBEC4D129FFB858A /* CMake PostBuild Rules */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E43888B5AEC1435681E5909F /* PBXTargetDependency */,
+			);
+			name = "protobuf-c";
+			productName = "protobuf-c";
+			productReference = F112F2A862644F18AEEE4E67 /* libprotobuf-c.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		787E2BC2383E465B908DD90E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1010;
+			};
+			buildConfigurationList = 2E67BE9700D14C3A8BE4A8B0 /* Build configuration list for PBXProject "signal-protocol-c" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 18DD6EE2229D48FEB6FDC35E;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4BACC4AFB2594B97BAFEDF31 /* ALL_BUILD */,
+				4AA728E19BFB4E369FBBAD3D /* ZERO_CHECK */,
+				95ABFDCE12C24E3A9A39031E /* install */,
+				23387E184D7C4CC8AF1CBA90 /* signal-protocol-c */,
+				0F0D919576E34832881E5A4A /* curve25519 */,
+				63436188D3A044CEAE7AA207 /* protobuf-c */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2E05B5C974A146F89867A3E3 /* CMake PostBuild Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake PostBuild Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519 -f /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/CMakeScripts/curve25519_postBuildPhase.make$CONFIGURATION all";
+			showEnvVarsInLog = 0;
+		};
+		33D36DF5CBEC4D129FFB858A /* CMake PostBuild Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake PostBuild Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/protobuf-c -f /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/protobuf-c/CMakeScripts/protobuf-c_postBuildPhase.make$CONFIGURATION all";
+			showEnvVarsInLog = 0;
+		};
+		43B6D94992C441CB803FB045 /* CMake Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c -f /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/CMakeScripts/ZERO_CHECK_cmakeRulesBuildPhase.make$CONFIGURATION all";
+			showEnvVarsInLog = 0;
+		};
+		AB260733A9794EB084E9A697 /* CMake PostBuild Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake PostBuild Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c -f /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/CMakeScripts/install_postBuildPhase.make$CONFIGURATION all";
+			showEnvVarsInLog = 0;
+		};
+		B5EB22D63D1A4DA39878A953 /* CMake Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c -f /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/CMakeScripts/ALL_BUILD_cmakeRulesBuildPhase.make$CONFIGURATION all";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		58A9E138D5504FF3AA1E61E9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				11EA54F0063B415981DC67C8 /* FingerprintProtocol.pb-c.c in Sources */,
+				5179560025134F268750743D /* LocalStorageProtocol.pb-c.c in Sources */,
+				F47CD27202AF44B2A0A20ADD /* WhisperTextProtocol.pb-c.c in Sources */,
+				3D7AABD60E734B19BF4148A9 /* curve.c in Sources */,
+				FC9801F3DEB043F9835A04D4 /* device_consistency.c in Sources */,
+				86FEE46BBFF140BA85CE3A97 /* fingerprint.c in Sources */,
+				E452FD47CCC0495D8B1CA1DD /* group_cipher.c in Sources */,
+				04654CFADDD049F59E22515E /* group_session_builder.c in Sources */,
+				CE4009FC76F54D9DAA713790 /* hkdf.c in Sources */,
+				23726D6D67EF44F2989FDA3D /* key_helper.c in Sources */,
+				EE1C8BD71FC5498EBF1D1A79 /* protocol.c in Sources */,
+				915E58EF196A4FB9A4F7F519 /* ratchet.c in Sources */,
+				161E8CB511C547DF93E7E5EF /* sender_key.c in Sources */,
+				09F2B3CF5AA04616B087CAF5 /* sender_key_record.c in Sources */,
+				E22934A1DD5D4486883D0706 /* sender_key_state.c in Sources */,
+				05029ACFA444404392591C53 /* session_builder.c in Sources */,
+				4D794D208691441BA44F298E /* session_cipher.c in Sources */,
+				6AAB628BDFFE4653946348BF /* session_pre_key.c in Sources */,
+				41048DA2F8554E80BAC97E88 /* session_record.c in Sources */,
+				251C99524EBE40E7A1EBFF5E /* session_state.c in Sources */,
+				EBDB5D72F70242DD8F7B2EAC /* signal_protocol.c in Sources */,
+				3A6EBF479726412B9AA9B87F /* vpool.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C309A7CE74254FAB8458A053 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				45C0139967304D59AF8015C3 /* protobuf-c.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD1B0E31CE5D4C2AAC80EF1B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C8389741887A4490813108F0 /* curve25519-donna.c in Sources */,
+				75F241C0AEDB40858BFABAAB /* compare.c in Sources */,
+				A14132F2E667494A9666D0B9 /* curve_sigs.c in Sources */,
+				68618F307B4F4AE388FE6BB9 /* elligator.c in Sources */,
+				7DE4219CA40A45408473C49B /* fe_isequal.c in Sources */,
+				7C3C53CAD51742F3BA6086AC /* fe_isreduced.c in Sources */,
+				E3E2E8DDBBEC46C0B6CFB4AB /* fe_mont_rhs.c in Sources */,
+				2FAED208F85E4FE08A9195BF /* fe_montx_to_edy.c in Sources */,
+				6EBD4FDF539A4CFE9D96672E /* fe_sqrt.c in Sources */,
+				3E6AE045D29C4C2A8C205347 /* ge_isneutral.c in Sources */,
+				35863EC194734D71904D8087 /* ge_montx_to_p3.c in Sources */,
+				B2F7CD134C714FFEA330AA71 /* ge_neg.c in Sources */,
+				6D9D612A7BD944A584E1D48E /* ge_p3_to_montx.c in Sources */,
+				0949EA29398F4D1499385CB0 /* ge_scalarmult.c in Sources */,
+				FD5722E2CE3A4D438FFFADD4 /* ge_scalarmult_cofactor.c in Sources */,
+				74E44D7AC6644986AC3665FC /* ge_p3_add.c in Sources */,
+				791D775D997D4AF8AC2B5D12 /* gen_eddsa.c in Sources */,
+				23A21BABBA0343538891A7CC /* gen_labelset.c in Sources */,
+				5A96BF1E0DAB4902BC8C5CF6 /* gen_veddsa.c in Sources */,
+				0102E25D89914340B8CD294F /* gen_x.c in Sources */,
+				5D53DB75C82F4F3DA484F50B /* point_isreduced.c in Sources */,
+				AB8816963068499FAD6C1C14 /* sc_isreduced.c in Sources */,
+				7606737095D94AE990250B08 /* keygen.c in Sources */,
+				36D4B143ADC846AD920FC6A6 /* open_modified.c in Sources */,
+				1EB33293C92A40C995B0EF1E /* sc_clamp.c in Sources */,
+				80C036FB155A4747BF4AB4E0 /* sc_cmov.c in Sources */,
+				9601B231123147C5AFABC05C /* sc_neg.c in Sources */,
+				F358258EDB014D4CA67F7E8B /* sign_modified.c in Sources */,
+				D4B1941D77084FABB925E36D /* utility.c in Sources */,
+				C6F4701D34AC48D5A542305E /* xeddsa.c in Sources */,
+				5268AE40813D4062B06FEE49 /* zeroize.c in Sources */,
+				3A8F5F653C8F454F845A20B7 /* fe_0.c in Sources */,
+				BA7FE8C57B8C4B67BA4BE642 /* fe_1.c in Sources */,
+				989244CCA503410DA453593B /* fe_add.c in Sources */,
+				834225A77E1E4F50ACFA8EEF /* fe_cmov.c in Sources */,
+				C814F377005F41ADBFB14D6D /* fe_copy.c in Sources */,
+				A0B9F583890740E8920733E1 /* fe_frombytes.c in Sources */,
+				CA616D8D6ED141A09F020A6C /* fe_invert.c in Sources */,
+				E9DCFFE588604CFF8DFA77D7 /* fe_isnegative.c in Sources */,
+				24F93C8912104CC1A3EF9CA6 /* fe_isnonzero.c in Sources */,
+				C46A70B002D042D0930F1EA9 /* fe_mul.c in Sources */,
+				DD651CA91B7F4E7A9350D7D6 /* fe_neg.c in Sources */,
+				8A3E7F8B70CE43AF955419F3 /* fe_pow22523.c in Sources */,
+				56A57489D20443EAB63694A0 /* fe_sq.c in Sources */,
+				4237A413759C494188DE6C43 /* fe_sq2.c in Sources */,
+				658A8A530A3045C19F162ACB /* fe_sub.c in Sources */,
+				6786D703920943A580971C54 /* fe_tobytes.c in Sources */,
+				AA5ACAFBB2C74FA0BCF12D67 /* ge_add.c in Sources */,
+				C4159AFF95B34E53B09D8249 /* ge_double_scalarmult.c in Sources */,
+				F6FBEEB34B744E179E72FE8A /* ge_frombytes.c in Sources */,
+				9E327CF8E90F42F5A2144EDD /* ge_madd.c in Sources */,
+				3111ED750C854AAABECECBB1 /* ge_msub.c in Sources */,
+				4954BEA5BB004C69BD6A9813 /* ge_p1p1_to_p2.c in Sources */,
+				17C8A0578B064D24A4523110 /* ge_p1p1_to_p3.c in Sources */,
+				BDAC95E4E8B94C60B0F38FAF /* ge_p2_0.c in Sources */,
+				0A8FA3988FFF4F489D8658BA /* ge_p2_dbl.c in Sources */,
+				D13B1944475A42409DE25A38 /* ge_p3_0.c in Sources */,
+				CA86567365784D0CBE56E6F6 /* ge_p3_dbl.c in Sources */,
+				B19E94FD10E24BE291830C51 /* ge_p3_to_cached.c in Sources */,
+				48DBC640227A4F6CAD8D98DF /* ge_p3_to_p2.c in Sources */,
+				084BD1A22A224C9BA427D2B3 /* ge_p3_tobytes.c in Sources */,
+				EA47643A3F2C4287ADF1DD15 /* ge_precomp_0.c in Sources */,
+				75DFA3BCD9C848D0986764DA /* ge_scalarmult_base.c in Sources */,
+				D9251C07C4FB4CC38F5AF74E /* ge_sub.c in Sources */,
+				7BDCA21DAAE240848B6D138B /* ge_tobytes.c in Sources */,
+				64F2BA61853246489D81974C /* blocks.c in Sources */,
+				9951FA45B31C4E06AB6894D7 /* hash.c in Sources */,
+				7170236EEABE490383315375 /* open.c in Sources */,
+				8D124656E7A64F1DB3502672 /* sc_muladd.c in Sources */,
+				4E34F782461D4DAA93C20294 /* sc_reduce.c in Sources */,
+				C4E1FFD3A3DD45F3B3E3D755 /* sign.c in Sources */,
+				393C4DADB8944DFB957B8995 /* internal_fast_tests.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0CB0027008AF4217896EE645 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4BACC4AFB2594B97BAFEDF31 /* ALL_BUILD */;
+			targetProxy = 2258E955DCBD4499877FF551 /* PBXContainerItemProxy */;
+		};
+		172C38D89A2D419CB4CC5286 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4AA728E19BFB4E369FBBAD3D /* ZERO_CHECK */;
+			targetProxy = 47D5508414B04AADBB31E6C1 /* PBXContainerItemProxy */;
+		};
+		6D622D363CD54715B559D09A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4AA728E19BFB4E369FBBAD3D /* ZERO_CHECK */;
+			targetProxy = 7E58D031CF9D4EBF943871CC /* PBXContainerItemProxy */;
+		};
+		7168CAD59E854F22BAF936A9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4AA728E19BFB4E369FBBAD3D /* ZERO_CHECK */;
+			targetProxy = 1505C83567384B14A6481406 /* PBXContainerItemProxy */;
+		};
+		754F01D7DA1F4D60AC5B705E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 63436188D3A044CEAE7AA207 /* protobuf-c */;
+			targetProxy = 5FD2C58DE57D48A58F6237D2 /* PBXContainerItemProxy */;
+		};
+		760E373F3AFE4C908C63DB50 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0F0D919576E34832881E5A4A /* curve25519 */;
+			targetProxy = 229CCBC7C76944129B9E8D54 /* PBXContainerItemProxy */;
+		};
+		86C250484B6146BABB5982A8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 63436188D3A044CEAE7AA207 /* protobuf-c */;
+			targetProxy = 87E543D35862470B8FC8B979 /* PBXContainerItemProxy */;
+		};
+		8DE979FEADEB43A1986F9C47 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0F0D919576E34832881E5A4A /* curve25519 */;
+			targetProxy = DCFF17DBB5E847BE9AE6FCB0 /* PBXContainerItemProxy */;
+		};
+		E43888B5AEC1435681E5909F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4AA728E19BFB4E369FBBAD3D /* ZERO_CHECK */;
+			targetProxy = FA07DA37E74A46FFAD88F158 /* PBXContainerItemProxy */;
+		};
+		FCDD4F68C3EF41428DE7E6C2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 23387E184D7C4CC8AF1CBA90 /* signal-protocol-c */;
+			targetProxy = 98180A8F13114201B1DED9D1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		01EB6E5E113F4414B850B10A /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = RelWithDebInfo;
+		};
+		0B5E803C62214F7CB99AEDF2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = Release;
+		};
+		0EA85935CA984F3FA788ABDD /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = install;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = MinSizeRel;
+		};
+		19D1F9B04B8C427E9FD79902 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/signal-protocol-c.build/Release/curve25519.build/Objects-normal/";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					"/Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/.",
+					"/Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/ed25519/nacl_includes",
+					"/Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/ed25519/additions",
+					"/Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/ed25519/sha512",
+					"/Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/ed25519",
+					"/Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519",
+					"/Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/ed25519/additions/generalized",
+					"/Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/ed25519/tests",
+				);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CFLAGS = "  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = curve25519;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = Release;
+		};
+		2FCD8C015FDE446093531FCC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/protobuf-c/signal-protocol-c.build/Debug/protobuf-c.build/Objects-normal/";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					"/Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/.",
+					"/Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/ed25519/nacl_includes",
+					"/Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/ed25519/additions",
+					"/Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/ed25519/sha512",
+					"/Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/ed25519",
+					"/Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519",
+				);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CFLAGS = "  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = "protobuf-c";
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/protobuf-c";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = Debug;
+		};
+		3254A5E37AD24001814DBDDD /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.1.sdk;
+				SYMROOT = "/Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/build";
+			};
+			name = RelWithDebInfo;
+		};
+		36197C5E29C64A4681A7414A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.1.sdk;
+				SYMROOT = "/Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/build";
+			};
+			name = Debug;
+		};
+		36E87CAD71E745D78CC23459 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = install;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = Release;
+		};
+		3A01C83954D44637840FA97C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					"/Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/.",
+					"/Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/ed25519/nacl_includes",
+					"/Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/ed25519/additions",
+					"/Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/ed25519/sha512",
+					"/Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/ed25519",
+					"/Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519",
+				);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CFLAGS = "  ";
+				OTHER_LIBTOOLFLAGS = " /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/curve25519-donna.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/fe_0.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/fe_1.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/fe_add.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/fe_cmov.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/fe_copy.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/fe_frombytes.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/fe_invert.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/fe_isnegative.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/fe_isnonzero.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/fe_mul.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/fe_neg.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/fe_pow22523.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/fe_sq.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/fe_sq2.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/fe_sub.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/fe_tobytes.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/ge_add.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/ge_double_scalarmult.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/ge_frombytes.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/ge_madd.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/ge_msub.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/ge_p1p1_to_p2.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/ge_p1p1_to_p3.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/ge_p2_0.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/ge_p2_dbl.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/ge_p3_0.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/ge_p3_dbl.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/ge_p3_to_cached.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/ge_p3_to_p2.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/ge_p3_tobytes.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/ge_precomp_0.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/ge_scalarmult_base.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/ge_sub.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/ge_tobytes.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/open.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/sc_muladd.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/sc_reduce.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/sign.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/compare.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/curve_sigs.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/elligator.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/fe_isequal.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/fe_isreduced.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/fe_mont_rhs.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/fe_montx_to_edy.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/fe_sqrt.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/ge_isneutral.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/ge_montx_to_p3.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/ge_neg.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/ge_p3_to_montx.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/ge_scalarmult.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/ge_scalarmult_cofactor.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/keygen.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/open_modified.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/sc_clamp.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/sc_cmov.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/sc_neg.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/sign_modified.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/utility.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/ge_p3_add.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/gen_eddsa.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/gen_labelset.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/gen_veddsa.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/gen_x.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/point_isreduced.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/sc_isreduced.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/xeddsa.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/zeroize.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/blocks.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/hash.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/internal_fast_tests.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/protobuf-c/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/protobuf-c.build/Objects-normal/$(CURRENT_ARCH)/protobuf-c.o";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = "signal-protocol-c";
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = Release;
+		};
+		45A7BA3B7C004D5B96ADEF6B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/protobuf-c/signal-protocol-c.build/Release/protobuf-c.build/Objects-normal/";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					"/Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/.",
+					"/Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/ed25519/nacl_includes",
+					"/Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/ed25519/additions",
+					"/Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/ed25519/sha512",
+					"/Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/ed25519",
+					"/Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519",
+				);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CFLAGS = "  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = "protobuf-c";
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/protobuf-c";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = Release;
+		};
+		48842D2ED19F42AABE4DFD33 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/signal-protocol-c.build/Debug/curve25519.build/Objects-normal/";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					"/Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/.",
+					"/Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/ed25519/nacl_includes",
+					"/Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/ed25519/additions",
+					"/Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/ed25519/sha512",
+					"/Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/ed25519",
+					"/Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519",
+					"/Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/ed25519/additions/generalized",
+					"/Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/ed25519/tests",
+				);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CFLAGS = "  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = curve25519;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = Debug;
+		};
+		508BBB07095B49CDA77C80AB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = Debug;
+		};
+		5406516F1C564BB4A7209A68 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.1.sdk;
+				SYMROOT = "/Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/build";
+			};
+			name = Release;
+		};
+		62CA21CD327342289DFDEA6D /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = MinSizeRel;
+		};
+		72B72C3C90C149EC9A222E1D /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.1.sdk;
+				SYMROOT = "/Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/build";
+			};
+			name = MinSizeRel;
+		};
+		7ABDA21407EB4AD1AFCC172C /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/signal-protocol-c.build/RelWithDebInfo/curve25519.build/Objects-normal/";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					"/Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/.",
+					"/Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/ed25519/nacl_includes",
+					"/Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/ed25519/additions",
+					"/Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/ed25519/sha512",
+					"/Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/ed25519",
+					"/Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519",
+					"/Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/ed25519/additions/generalized",
+					"/Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/ed25519/tests",
+				);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CFLAGS = "  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = curve25519;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = RelWithDebInfo;
+		};
+		7CDF7960D3654F27AC1F19FF /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/protobuf-c/signal-protocol-c.build/MinSizeRel/protobuf-c.build/Objects-normal/";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					"/Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/.",
+					"/Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/ed25519/nacl_includes",
+					"/Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/ed25519/additions",
+					"/Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/ed25519/sha512",
+					"/Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/ed25519",
+					"/Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519",
+				);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CFLAGS = "  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = "protobuf-c";
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/protobuf-c";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = MinSizeRel;
+		};
+		94257EDE0D344528A42E9470 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = MinSizeRel;
+		};
+		9B19CD6D5F394E21B747AE42 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = RelWithDebInfo;
+		};
+		A2BF2CDC7F1A4EE58AF1745A /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = install;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = RelWithDebInfo;
+		};
+		A2D9FD111EC441E0963BC1EA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					"/Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/.",
+					"/Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/ed25519/nacl_includes",
+					"/Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/ed25519/additions",
+					"/Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/ed25519/sha512",
+					"/Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/ed25519",
+					"/Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519",
+				);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CFLAGS = "  ";
+				OTHER_LIBTOOLFLAGS = " /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/curve25519-donna.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/fe_0.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/fe_1.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/fe_add.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/fe_cmov.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/fe_copy.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/fe_frombytes.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/fe_invert.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/fe_isnegative.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/fe_isnonzero.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/fe_mul.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/fe_neg.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/fe_pow22523.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/fe_sq.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/fe_sq2.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/fe_sub.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/fe_tobytes.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/ge_add.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/ge_double_scalarmult.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/ge_frombytes.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/ge_madd.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/ge_msub.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/ge_p1p1_to_p2.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/ge_p1p1_to_p3.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/ge_p2_0.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/ge_p2_dbl.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/ge_p3_0.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/ge_p3_dbl.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/ge_p3_to_cached.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/ge_p3_to_p2.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/ge_p3_tobytes.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/ge_precomp_0.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/ge_scalarmult_base.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/ge_sub.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/ge_tobytes.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/open.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/sc_muladd.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/sc_reduce.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/sign.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/compare.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/curve_sigs.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/elligator.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/fe_isequal.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/fe_isreduced.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/fe_mont_rhs.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/fe_montx_to_edy.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/fe_sqrt.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/ge_isneutral.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/ge_montx_to_p3.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/ge_neg.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/ge_p3_to_montx.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/ge_scalarmult.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/ge_scalarmult_cofactor.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/keygen.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/open_modified.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/sc_clamp.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/sc_cmov.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/sc_neg.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/sign_modified.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/utility.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/ge_p3_add.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/gen_eddsa.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/gen_labelset.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/gen_veddsa.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/gen_x.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/point_isreduced.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/sc_isreduced.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/xeddsa.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/zeroize.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/blocks.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/hash.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/internal_fast_tests.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/protobuf-c/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/protobuf-c.build/Objects-normal/$(CURRENT_ARCH)/protobuf-c.o";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = "signal-protocol-c";
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = Debug;
+		};
+		B0936B0CE8F1435D829B86B7 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/signal-protocol-c.build/MinSizeRel/curve25519.build/Objects-normal/";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					"/Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/.",
+					"/Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/ed25519/nacl_includes",
+					"/Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/ed25519/additions",
+					"/Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/ed25519/sha512",
+					"/Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/ed25519",
+					"/Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519",
+					"/Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/ed25519/additions/generalized",
+					"/Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/ed25519/tests",
+				);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CFLAGS = "  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = curve25519;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = MinSizeRel;
+		};
+		BBBD87320ED54B74BDFA8AC0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = Release;
+		};
+		BDE03718370447D09BCDD54C /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					"/Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/.",
+					"/Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/ed25519/nacl_includes",
+					"/Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/ed25519/additions",
+					"/Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/ed25519/sha512",
+					"/Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/ed25519",
+					"/Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519",
+				);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CFLAGS = "  ";
+				OTHER_LIBTOOLFLAGS = " /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/curve25519-donna.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/fe_0.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/fe_1.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/fe_add.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/fe_cmov.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/fe_copy.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/fe_frombytes.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/fe_invert.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/fe_isnegative.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/fe_isnonzero.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/fe_mul.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/fe_neg.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/fe_pow22523.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/fe_sq.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/fe_sq2.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/fe_sub.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/fe_tobytes.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/ge_add.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/ge_double_scalarmult.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/ge_frombytes.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/ge_madd.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/ge_msub.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/ge_p1p1_to_p2.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/ge_p1p1_to_p3.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/ge_p2_0.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/ge_p2_dbl.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/ge_p3_0.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/ge_p3_dbl.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/ge_p3_to_cached.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/ge_p3_to_p2.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/ge_p3_tobytes.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/ge_precomp_0.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/ge_scalarmult_base.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/ge_sub.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/ge_tobytes.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/open.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/sc_muladd.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/sc_reduce.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/sign.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/compare.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/curve_sigs.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/elligator.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/fe_isequal.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/fe_isreduced.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/fe_mont_rhs.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/fe_montx_to_edy.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/fe_sqrt.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/ge_isneutral.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/ge_montx_to_p3.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/ge_neg.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/ge_p3_to_montx.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/ge_scalarmult.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/ge_scalarmult_cofactor.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/keygen.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/open_modified.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/sc_clamp.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/sc_cmov.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/sc_neg.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/sign_modified.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/utility.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/ge_p3_add.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/gen_eddsa.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/gen_labelset.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/gen_veddsa.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/gen_x.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/point_isreduced.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/sc_isreduced.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/xeddsa.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/zeroize.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/blocks.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/hash.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/internal_fast_tests.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/protobuf-c/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/protobuf-c.build/Objects-normal/$(CURRENT_ARCH)/protobuf-c.o";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = "signal-protocol-c";
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = MinSizeRel;
+		};
+		E5DC25BD3AB7423AB23D55BF /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/protobuf-c/signal-protocol-c.build/RelWithDebInfo/protobuf-c.build/Objects-normal/";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					"/Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/.",
+					"/Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/ed25519/nacl_includes",
+					"/Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/ed25519/additions",
+					"/Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/ed25519/sha512",
+					"/Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/ed25519",
+					"/Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519",
+				);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CFLAGS = "  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = "protobuf-c";
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/protobuf-c";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = RelWithDebInfo;
+		};
+		E6CC60D91A2A48FFBF7F4B5E /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					"/Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/.",
+					"/Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/ed25519/nacl_includes",
+					"/Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/ed25519/additions",
+					"/Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/ed25519/sha512",
+					"/Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/ed25519",
+					"/Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519",
+				);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CFLAGS = "  ";
+				OTHER_LIBTOOLFLAGS = " /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/curve25519-donna.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/fe_0.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/fe_1.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/fe_add.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/fe_cmov.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/fe_copy.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/fe_frombytes.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/fe_invert.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/fe_isnegative.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/fe_isnonzero.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/fe_mul.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/fe_neg.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/fe_pow22523.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/fe_sq.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/fe_sq2.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/fe_sub.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/fe_tobytes.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/ge_add.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/ge_double_scalarmult.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/ge_frombytes.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/ge_madd.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/ge_msub.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/ge_p1p1_to_p2.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/ge_p1p1_to_p3.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/ge_p2_0.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/ge_p2_dbl.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/ge_p3_0.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/ge_p3_dbl.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/ge_p3_to_cached.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/ge_p3_to_p2.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/ge_p3_tobytes.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/ge_precomp_0.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/ge_scalarmult_base.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/ge_sub.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/ge_tobytes.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/open.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/sc_muladd.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/sc_reduce.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/sign.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/compare.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/curve_sigs.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/elligator.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/fe_isequal.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/fe_isreduced.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/fe_mont_rhs.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/fe_montx_to_edy.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/fe_sqrt.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/ge_isneutral.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/ge_montx_to_p3.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/ge_neg.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/ge_p3_to_montx.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/ge_scalarmult.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/ge_scalarmult_cofactor.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/keygen.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/open_modified.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/sc_clamp.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/sc_cmov.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/sc_neg.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/sign_modified.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/utility.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/ge_p3_add.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/gen_eddsa.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/gen_labelset.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/gen_veddsa.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/gen_x.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/point_isreduced.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/sc_isreduced.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/xeddsa.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/zeroize.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/blocks.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/hash.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/curve25519/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/curve25519.build/Objects-normal/$(CURRENT_ARCH)/internal_fast_tests.o /Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src/protobuf-c/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/protobuf-c.build/Objects-normal/$(CURRENT_ARCH)/protobuf-c.o";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = "signal-protocol-c";
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/src";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = RelWithDebInfo;
+		};
+		FC780E270C144D05BD9EB9B3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = Debug;
+		};
+		FFE54A19508C4FBC9F9717FF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = install;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2E67BE9700D14C3A8BE4A8B0 /* Build configuration list for PBXProject "signal-protocol-c" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				36197C5E29C64A4681A7414A /* Debug */,
+				5406516F1C564BB4A7209A68 /* Release */,
+				72B72C3C90C149EC9A222E1D /* MinSizeRel */,
+				3254A5E37AD24001814DBDDD /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		482E27F0855F423AA43C75A0 /* Build configuration list for PBXNativeTarget "protobuf-c" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2FCD8C015FDE446093531FCC /* Debug */,
+				45A7BA3B7C004D5B96ADEF6B /* Release */,
+				7CDF7960D3654F27AC1F19FF /* MinSizeRel */,
+				E5DC25BD3AB7423AB23D55BF /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		97889CD6F6044CFCA6921E83 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				508BBB07095B49CDA77C80AB /* Debug */,
+				0B5E803C62214F7CB99AEDF2 /* Release */,
+				62CA21CD327342289DFDEA6D /* MinSizeRel */,
+				01EB6E5E113F4414B850B10A /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		991F3672C2C24F89AA85DE8B /* Build configuration list for PBXAggregateTarget "install" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FFE54A19508C4FBC9F9717FF /* Debug */,
+				36E87CAD71E745D78CC23459 /* Release */,
+				0EA85935CA984F3FA788ABDD /* MinSizeRel */,
+				A2BF2CDC7F1A4EE58AF1745A /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		B8C3A10E896345EA8A7DF020 /* Build configuration list for PBXNativeTarget "signal-protocol-c" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A2D9FD111EC441E0963BC1EA /* Debug */,
+				3A01C83954D44637840FA97C /* Release */,
+				BDE03718370447D09BCDD54C /* MinSizeRel */,
+				E6CC60D91A2A48FFBF7F4B5E /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		E132F608273E4110A5A0463A /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FC780E270C144D05BD9EB9B3 /* Debug */,
+				BBBD87320ED54B74BDFA8AC0 /* Release */,
+				94257EDE0D344528A42E9470 /* MinSizeRel */,
+				9B19CD6D5F394E21B747AE42 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		FCF023FD3D084516A908B075 /* Build configuration list for PBXNativeTarget "curve25519" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				48842D2ED19F42AABE4DFD33 /* Debug */,
+				19D1F9B04B8C427E9FD79902 /* Release */,
+				B0936B0CE8F1435D829B86B7 /* MinSizeRel */,
+				7ABDA21407EB4AD1AFCC172C /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 787E2BC2383E465B908DD90E /* Project object */;
+}
