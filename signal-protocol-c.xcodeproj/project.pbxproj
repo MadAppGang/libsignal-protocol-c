@@ -1033,6 +1033,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD)";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.1.sdk;
 				SYMROOT = "/Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/build";
 			};
@@ -1042,6 +1043,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD)";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.1.sdk;
 				SYMROOT = "/Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/build";
 			};
@@ -1221,6 +1223,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD)";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.1.sdk;
 				SYMROOT = "/Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/build";
 			};
@@ -1256,6 +1259,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD)";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.1.sdk;
 				SYMROOT = "/Users/dmytrolisitsyn/Developer/Strongbox/libsignal-protocol-c/build";
 			};
